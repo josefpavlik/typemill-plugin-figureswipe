@@ -1,0 +1,58 @@
+From 0412ea7cf99773e1de6c86a34ae775640f8038c3 Mon Sep 17 00:00:00 2001
+From: Josef Pavlik <josef@pavlik.it>
+Date: Fri, 20 Dec 2024 17:45:51 +0100
+Subject: addJS and addInlineJS allow to specify attributes for tag <script>
+
+
+diff --git a/system/typemill/Assets.php b/system/typemill/Assets.php
+index 02b6576..6b57900 100644
+--- a/system/typemill/Assets.php
++++ b/system/typemill/Assets.php
+@@ -82,19 +82,19 @@ class Assets
+                $this->inlineCSS[] = '<style>' . $CSS . '</style>';
+        }
+ 
+-       public function addJS($JS)
++       public function addJS($JS, $attr)
+        {
+                $JSfile = $this->getFileUrl($JS);
+ 
+                if($JSfile)
+                {
+-                       $this->JS[] = '<script src="' . $JSfile . '"></script>';
++                       $this->JS[] = '<script ' . $attr . ' src="' . $JSfile . '"></script>';
+                }
+        }
+ 
+-       public function addInlineJS($JS)
++       public function addInlineJS($JS, $attr)
+        {
+-               $this->inlineJS[] = '<script>' . $JS . '</script>';
++               $this->inlineJS[] = '<script' . $attr . '>' . $JS . '</script>';
+        }
+ 
+        public function addBloxConfigJS($JS)
+diff --git a/system/typemill/Plugin.php b/system/typemill/Plugin.php
+index 49cff29..709a618 100644
+--- a/system/typemill/Plugin.php
++++ b/system/typemill/Plugin.php
+@@ -201,14 +201,14 @@ abstract class Plugin implements EventSubscriberInterface
+                $this->container->get('view')->getEnvironment()->addFunction($function);
+        }
+ 
+-       protected function addJS($JS)
++       protected function addJS($JS, $attr="")
+        {
+-               $this->container->get('assets')->addJS($JS);
++               $this->container->get('assets')->addJS($JS, $attr);
+        }
+ 
+-       protected function addInlineJS($JS)
++       protected function addInlineJS($JS, $attr="")
+        {
+-               $this->container->get('assets')->addInlineJS($JS);
++               $this->container->get('assets')->addInlineJS($JS, $attr);
+        }
+ 
+        protected function addBloxConfigJS($JS)
+
