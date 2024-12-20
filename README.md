@@ -16,7 +16,7 @@ If the resolution of the image is larger than the window of browser, the second 
 
 
 
-## Installation
+# Installation
 clone this repository to your plugins directory of typemill
 
 ```
@@ -25,6 +25,12 @@ git clone https://github.com/josefpavlik/typemill-plugin-figureswipe.git figureS
 cd figureSwipe
 ./prepare_libs
 ```
+
+## Patch the typemill
+Actually the typemill requires a simple patch to work this plugin. You should apply patch typemill.patch to your typemill.
+
+``` patch << typemill.patch ```
+
 ## Activate the plugin
 Go to the *System* page and select the *Plugin* on the left menu
 Search for the figureSwipe plugin and enable it
