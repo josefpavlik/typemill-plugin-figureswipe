@@ -1,6 +1,6 @@
 # figureSwipe plugin for typemill
 
-The plugin allows you to zoom in the figures in the page and show then one after other like photo gallery.
+The plugin allows you to zoom in the figures in the page and show them one after other like photo gallery.
 The text from the attribute **alt** of the figure is shown below or aside the picture.
 
 ### A page of typemill documentation
@@ -48,7 +48,7 @@ The images must be inserted with full resolution. The resolution of the image mu
 ![](doc/insert_image3.png)
 * Now set the flag "Do not resize". The width and height will be compiled with real size of the image
 ![](doc/insert_image4.png)
-* If you want, compile the *Caption* (for the listing) and the *Alt* attribute for the text in zoom-in mode
+* If you want, compile the *Caption* (for the listing) and the *Alt-text* attribute for the text in zoom-in mode
 ![](doc/insert_image5.png)
 * Save
   
