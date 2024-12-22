@@ -1,5 +1,5 @@
 import PhotoSwipeLightbox from './lib/PhotoSwipe/dist/photoswipe-lightbox.esm.js';
-import PhotoSwipeDynamicCaption from './lib/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js';
+import PhotoSwipeDynamicCaption from './lib/photoswipe-dynamic-caption-plugin/dist/photoswipe-dynamic-caption-plugin.esm.min.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {

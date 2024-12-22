@@ -3,18 +3,21 @@
 The plugin allows you to zoom in the figures in the page and show them one after other like photo gallery.
 The text from the attribute **alt** of the figure is shown below or aside the picture.
 
+(c) 2024 Josef Pavlik [source on github](https://github.com/josefpavlik/typemill-plugin-figureswipe)
+License: MIT
+
+Based on [PhotoSwipe](https://github.com/dimsemenov/PhotoSwipe/) and [photoswipe-dynamic-caption-plugin](https://github.com/dimsemenov/photoswipe-dynamic-caption-plugin)
+
 ### A page of typemill documentation
 ![doc/screenshot1.png](doc/screenshot1.png)
 The first image is large, so it's zoomed out, it's not possible to read the text on
 
-### Clicking on the figure, it zoom in and show it on full page of browser
+### Clicking on the figure, it zooms in and shows it on full page of browser
 ![doc/screenshot2.png](doc/screenshot2.png)
 If the resolution of the image is larger than the window of browser, the second click zooms it to full resolution and it's possible to pan the image.
 
 ### Navigating on left or right arrow or swiping left and right you can show another figures of the page
 ![doc/screenshot3.png](doc/screenshot3.png)
-
-
 
 # Installation
 clone this repository to your plugins directory of typemill
@@ -27,7 +30,7 @@ cd figureSwipe
 ```
 
 ## Patch the typemill
-Actually the typemill requires a simple patch to work this plugin. You should apply patch typemill.patch to your typemill.
+Actually the stable version of typemill requires a simple patch to work this plugin. You should apply patch typemill.patch to your typemill or upgrade to the latest version of typemill.
 
 ``` patch << typemill.patch ```
 
