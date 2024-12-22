@@ -9,19 +9,21 @@ class figureSwipe extends plugin
     public static function getSubscribedEvents()
     {
         return [
-            'onSettingsLoaded'      => 'onSettingsLoaded',
+//            'onSettingsLoaded'      => 'onSettingsLoaded',
             'onTwigLoaded'          => 'onTwigLoaded'
         ];
     }   
+/*
     public function onSettingsLoaded($settings)
     {
         $this->settings = $settings->getData();
     }
+*/
     public function onTwigLoaded()
     {
-        $this->addCSS('/figureSwipe/lib/PhotoSwipe/dist/photoswipe.css');
-        $this->addCSS('/figureSwipe/lib/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css');
-        $this->addJS('/figureSwipe/figureSwipe.js', 'type="module"');
+        $this->addCSS('/figureSwipe/public/lib/PhotoSwipe/dist/photoswipe.css');
+        $this->addCSS('/figureSwipe/public/lib/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css');
+        $this->addJS('/figureSwipe/public/figureSwipe.js', 'type="module"');
 
 /*
         // get Twig Instance and add the figureSwipe template-folder to the path 

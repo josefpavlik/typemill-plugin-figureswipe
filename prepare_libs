@@ -1,5 +1,5 @@
 #!/bin/bash
-mkdir lib
-cd lib
+mkdir -p public/lib
+cd public/lib
 git clone https://github.com/dimsemenov/PhotoSwipe.git
 git clone https://github.com/dimsemenov/photoswipe-dynamic-caption-plugin.git
