@@ -29,8 +29,8 @@ cd figureSwipe
 ./prepare_libs
 ```
 
-## Patch the typemill
-Actually the stable version of typemill requires a simple patch to work this plugin. You should apply patch typemill.patch to your typemill or upgrade to the latest version of typemill.
+## Typemill older than V2.13 needs a patch
+Typemill before V2.13 needs a small patch to work with this plugin. Please update typemill to version 2.13 or above. If you want to use some older typmill, you should apply the patch typemill.patch.
 
 ``` patch << typemill.patch ```
 
